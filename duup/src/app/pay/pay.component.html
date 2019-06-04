@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+div {
+
+}
+#backg {
+	background-image: url(https://images.pexels.com/photos/287229/pexels-photo-287229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	height: 1000px;
+	width: 1700px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 40px;
+	font-weight: bolder;
+	text-transform: capitalize;
+	vertical-align: middle;
+	text-align: center;
+	text-indent: 10;
+	padding-top: 500px;
+	padding-left: 265px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="backg">
+  
+  <p>&nbsp;</p>
+<label>Account Holder</label>
+<br>
+<input type = "text" [(ngModel)] = "ac.holder">
+<br>
+<label>Account Type</label>
+<br>
+<input type = "text" [(ngModel)] = "ac.type">
+<br>
+<label>Account Number</label>
+<br>
+<input type = "text" [(ngModel)] = "ac.num">
+<br>
+<label>Branch Code</label>
+<br>
+<input type = "text" [(ngModel)] = "ac.code">
+<br>
+<button (click) = "submit()" routerLink = "/feedback">SUBMIT</button>
+
+</div>
+</body>
+</html>

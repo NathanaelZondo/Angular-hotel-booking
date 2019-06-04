@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+#top {
+	font-size: 24px;
+	font-style: italic;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-spacing: normal;
+	text-align: center;
+	top: auto;
+	background-image: url(wall.jpeg);
+	background-position: left center;
+	background-repeat: repeat;
+}
+.bcc {
+	background-image: url(https://www.wigglestatic.com/product-media/5360053348/Shimano-Ultegra-6701-10-Speed-Chain-116-Links-Chains-Silver-NotSet-CN6701116.jpg?w=1500&h=1500&a=7);
+	background-repeat: repeat-y;
+	background-attachment: scroll;
+}
+#pos {
+	position: static;
+}
+#form {
+	vertical-align: middle;
+	text-align: center;
+	background-image: url(2.jpeg);
+	background-position: right;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 20px;
+	text-transform: capitalize;
+}
+#form2 {
+	text-align: center;
+	vertical-align: middle;
+}
+#last {
+	background-image: url(wall.jpeg);
+	background-repeat: repeat-y;
+	background-position: center;
+	background-attachment: scroll;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bolder;
+	font-size: 24px;
+	text-align: left;
+	vertical-align: middle;
+	color: #000;
+}
+</style>
+</head>
+
+<body >
+
+<div id = "top">
+<label>SELECT DESTINATION</label>
+<table>
+<td>
+<img src="https://thumbs.dreamstime.com/b/welcome-to-cape-town-round-grunge-stamp-isolated-white-background-cape-town-welcome-to-cape-town-welcome-to-cape-town-stamp-122608843.jpg"     (click) = "res1(i = 0)" width = "300" height = "300">
+<br>
+<label>CAPE TOWN</label>
+</td>
+<td>
+<img (click) = "res1(i = 1)" src ="https://previews.123rf.com/images/aquir/aquir1608/aquir160805400/61735955-welcome-to-dubai-stamp.jpg" width = "300" height = "300" >
+<br>
+<label>DUBAI</label>
+</td>
+</table>
+</div>
+
+
+<div id = "form">
+<table>
+<th><label>Number of Days</label></th>
+<td>
+
+<input type = "text" [(ngModel)] = "flo.days">
+</td>
+<th><label>Number of Adults</label></th>
+<td>
+<input type = "text" [(ngModel)] = "flo.adult">
+</td>
+<th><label>Number of Children</label></th>
+<td>
+
+<input type = "text" [(ngModel)] = "flo.child">
+
+</td>
+<td>
+<button (click) = "enter()">ENTER</button>
+</td>
+<tr>
+<td>
+<button (click) = "vc()" >VIEW COST</button>
+</td>
+<td>
+<label>COST</label>
+<br>
+<input type = "text" [(ngModel)] = "flo2.cost" readonly>
+</td>
+</tr>
+</table>
+</div>
+
+<div id = "last" height = "700">
+<table>
+<td>
+<table>
+
+  <tr  >
+  <td *ngFor = "let dept of departments;let z = index"> <img  src = "{{dept.name}}" width = "200" height = "200" (click) = "view(z)"> </td>
+  </tr>
+    </table>
+  
+  
+  <table>
+    <td><img src ="{{link}}"  height = "700"  width = "1015"></td>
+
+  </table>
+</td>
+<td>
+<div  id = "form2">
+  <h1><p>Booking</p></h1>
+  <label>Enter your Name</label>
+  <br>
+  <input [(ngModel)] = "api.name" type = "text">
+  <br>
+  <label>Enter your Surname</label>
+  <br>
+  <input type = "text" [(ngModel)] = "api.surname">
+  <br>
+  <label>Enter your Email Address</label>
+  <br>
+  <input type = "text" [(ngModel)] = "api.email">
+<br>
+
+<button (click) = "save()" >Confirm Booking</button>
+<br>
+<label>The Total Amount</label>
+<br>
+<input type = "text" [(ngModel)] = "flo2.cost" readonly>
+<br>
+
+<pre *ngFor = "let details of rez; let d = index" >
+ Thank you {{details.name}} {{details.surname}} your booking has been reserved.
+ A confirmation email has been sent to {{details.email}}.
+</pre>
+
+</div>
+</td>
+</table>
+
+<div>
+
+
+
+</body>
+</html>
