@@ -1,0 +1,63 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+#bg {
+	background-color: #FC9;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 200px;
+	background-image: url(https://images.pexels.com/photos/2082949/pexels-photo-2082949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  height: 900px;
+}
+#b1 {
+	font-size: 18px;
+	color: #FFF;
+	font-weight: normal;
+	background-color: #F60;
+	float: none;
+	width: 100px;
+	height: 30px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	clip: rect(auto,auto,auto,auto);
+}
+
+#b2 {
+	font-size: 18px;
+	color: #FFF;
+	font-weight: normal;
+  text-align: center;
+}
+</style>
+</head>
+
+<body id = "bg">
+<h1>USER LOGIN</h1>
+<img src="https://img.icons8.com/ios/100/000000/user-filled.png" width="100" height="100" alt="avatar" />
+<div id = "cform">
+  
+
+<input type = "text" [(ngModel)] = "pop.name">
+<br>
+<br>
+<input type = "password" [(ngModel)] = "pop.pass"  >
+<br>
+<p>  </p>
+<p>  </p>
+<button id ="b1" (click) = "saves()" >SEND</button>
+
+<h4 id =  "b2" align = "center">{{message}}</h4>
+
+</div>
+
+</body>
+</html>
+

@@ -19,7 +19,7 @@ export class ToolComponent implements OnInit {
   flo:any = {};
   flo2:any = {};
   api:any ={};
-  link:string = "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
+  link:string = "https://images.pexels.com/photos/1145257/pexels-photo-1145257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
 
   departments: Department[] = [
   { name: 'https://images.pexels.com/photos/1061142/pexels-photo-1061142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'},
